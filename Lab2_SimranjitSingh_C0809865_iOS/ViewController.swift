@@ -55,6 +55,20 @@ class ViewController: UIViewController {
     //Variable to check if there's no winner
     var noWinner = false
     
+    //Variable to track the last move
+    var lastMove = ""
+    
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    //Function for shake detection
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -63,6 +77,7 @@ class ViewController: UIViewController {
         //Swipe gesture to reset the game
         let swipeRec = UISwipeGestureRecognizer(target: self, action: #selector(resetGame(_:)))
         view.addGestureRecognizer(swipeRec)
+        
     }
 
     //Function to reset the game after swiping
