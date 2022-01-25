@@ -134,6 +134,7 @@ class ViewController: UIViewController {
                     state = "over"
                 }
         }
+        //Calling method for saving current states
         savingProfile()
     }
     
@@ -355,6 +356,7 @@ class ViewController: UIViewController {
             
     }
     
+    //Method to save current states
     func savingProfile(){
         saveDefaults.setValue(a1.title(for: .normal), forKey: "a1")
         saveDefaults.setValue(a2.title(for: .normal), forKey: "a2")
@@ -371,6 +373,7 @@ class ViewController: UIViewController {
         saveDefaults.setValue(resultLabel.text, forKey: "result")
     }
 
+    //Method to display saved states on opening the app
     func savedProfile(){
         if let value = saveDefaults.value(forKey: "a1") as? String{
             a1.setTitle(value, for: .normal)
