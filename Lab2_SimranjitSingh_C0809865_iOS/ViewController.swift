@@ -56,17 +56,127 @@ class ViewController: UIViewController {
     var noWinner = false
     
     //Variable to track the last move
-    var lastMove = ""
+    var lastMove = 0
     
     override func becomeFirstResponder() -> Bool {
         return true
     }
-    //Function for shake detection
+    //Function to undo the last move by shake detection
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            
+            if(lastMove == 1){
+                if(a1.title(for: .normal) == "O"){
+                    currentTurn = Turn.Circle
+                    turnLabel.text = CIRCLE
+                }
+                if(a1.title(for: .normal) == "X"){
+                    currentTurn = Turn.Cross
+                    turnLabel.text = CROSS
+                }
+                a1.setTitle(nil, for: .normal)
+                a1.isEnabled = true
+            }
+            if(lastMove == 2){
+                if(a2.title(for: .normal) == "O"){
+                    currentTurn = Turn.Circle
+                    turnLabel.text = CIRCLE
+                }
+                if(a2.title(for: .normal) == "X"){
+                    currentTurn = Turn.Cross
+                    turnLabel.text = CROSS
+                }
+                a2.setTitle(nil, for: .normal)
+                a2.isEnabled = true
+            }
+            if(lastMove == 3){
+                if(a3.title(for: .normal) == "O"){
+                    currentTurn = Turn.Circle
+                    turnLabel.text = CIRCLE
+                }
+                if(a3.title(for: .normal) == "X"){
+                    currentTurn = Turn.Cross
+                    turnLabel.text = CROSS
+                }
+                a3.setTitle(nil, for: .normal)
+                a3.isEnabled = true
+            }
+            if(lastMove == 4){
+                if(b1.title(for: .normal) == "O"){
+                    currentTurn = Turn.Circle
+                    turnLabel.text = CIRCLE
+                }
+                if(b1.title(for: .normal) == "X"){
+                    currentTurn = Turn.Cross
+                    turnLabel.text = CROSS
+                }
+                b1.setTitle(nil, for: .normal)
+                b1.isEnabled = true
+            }
+            if(lastMove == 5){
+                if(b2.title(for: .normal) == "O"){
+                    currentTurn = Turn.Circle
+                    turnLabel.text = CIRCLE
+                }
+                if(b2.title(for: .normal) == "X"){
+                    currentTurn = Turn.Cross
+                    turnLabel.text = CROSS
+                }
+                b2.setTitle(nil, for: .normal)
+                b2.isEnabled = true
+            }
+            if(lastMove == 6){
+                if(b3.title(for: .normal) == "O"){
+                    currentTurn = Turn.Circle
+                    turnLabel.text = CIRCLE
+                }
+                if(b3.title(for: .normal) == "X"){
+                    currentTurn = Turn.Cross
+                    turnLabel.text = CROSS
+                }
+                b3.setTitle(nil, for: .normal)
+                b3.isEnabled = true
+            }
+            if(lastMove == 7){
+                if(c1.title(for: .normal) == "O"){
+                    currentTurn = Turn.Circle
+                    turnLabel.text = CIRCLE
+                }
+                if(c1.title(for: .normal) == "X"){
+                    currentTurn = Turn.Cross
+                    turnLabel.text = CROSS
+                }
+                c1.setTitle(nil, for: .normal)
+                c1.isEnabled = true
+            }
+            if(lastMove == 8){
+                if(c2.title(for: .normal) == "O"){
+                    currentTurn = Turn.Circle
+                    turnLabel.text = CIRCLE
+                }
+                if(c2.title(for: .normal) == "X"){
+                    currentTurn = Turn.Cross
+                    turnLabel.text = CROSS
+                }
+                c2.setTitle(nil, for: .normal)
+                c2.isEnabled = true
+            }
+            if(lastMove == 9){
+                if(c3.title(for: .normal) == "O"){
+                    currentTurn = Turn.Circle
+                    turnLabel.text = CIRCLE
+                }
+                if(c3.title(for: .normal) == "X"){
+                    currentTurn = Turn.Cross
+                    turnLabel.text = CROSS
+                }
+                c3.setTitle(nil, for: .normal)
+                c3.isEnabled = true
+            }
         }
     }
+    
+
+    
     
     
     override func viewDidLoad() {
@@ -106,6 +216,7 @@ class ViewController: UIViewController {
     
     //Checking the board for the tap recognition
     @IBAction func tapCheckerAction(_ sender: UIButton) {
+        lastMove = sender.tag
         filllTheBoard(sender)
         if state == "over"{
             return
@@ -208,7 +319,6 @@ class ViewController: UIViewController {
     
     //Function to fill the board according to the current turn
     func filllTheBoard(_ sender: UIButton){
-        
         if(state == "over"){
             return;
         } else{
