@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
+    <entity name="GameState" representedClassName="GameState" syncable="YES" codeGenerationType="class">
+        <attribute name="a1" optional="YES" attributeType="String"/>
+        <attribute name="a2" optional="YES" attributeType="String"/>
+        <attribute name="a3" optional="YES" attributeType="String"/>
+        <attribute name="b1" optional="YES" attributeType="String"/>
+        <attribute name="b2" optional="YES" attributeType="String"/>
+        <attribute name="b3" optional="YES" attributeType="String"/>
+        <attribute name="c1" optional="YES" attributeType="String"/>
+        <attribute name="c2" optional="YES" attributeType="String"/>
+        <attribute name="c3" optional="YES" attributeType="String"/>
+        <attribute name="scoreo" optional="YES" attributeType="String"/>
+        <attribute name="scorex" optional="YES" attributeType="String"/>
+        <attribute name="turn" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
-        <element name="Entity" positionX="-63" positionY="-18" width="128" height="29"/>
+        <element name="GameState" positionX="-63" positionY="-18" width="128" height="209"/>
     </elements>
 </model>

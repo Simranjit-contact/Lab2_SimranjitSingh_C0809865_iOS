@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>scorex</key>
+	<string></string>
+	<key>scoreo</key>
+	<string></string>
+	<key>turn</key>
+	<string></string>
+	<key>a1</key>
+	<string></string>
+	<key>a2</key>
+	<string></string>
+	<key>a3</key>
+	<string></string>
+	<key>b1</key>
+	<string></string>
+	<key>b2</key>
+	<string></string>
+	<key>b3</key>
+	<string></string>
+	<key>c1</key>
+	<string></string>
+	<key>c2</key>
+	<string></string>
+	<key>c3</key>
+	<string></string>
+</dict>
+</plist>

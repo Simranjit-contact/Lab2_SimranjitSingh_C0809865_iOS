@@ -5,7 +5,9 @@
 //  Created by user213023 on 1/25/22.
 //
 
+import Foundation
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -57,6 +59,9 @@ class ViewController: UIViewController {
     
     //Variable to track the last move
     var lastMove = 0
+    
+    //UserDefaults Instance
+    var saveDefaults  = UserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +71,9 @@ class ViewController: UIViewController {
         //Swipe gesture to reset the game
         let swipeRec = UISwipeGestureRecognizer(target: self, action: #selector(resetGame(_:)))
         view.addGestureRecognizer(swipeRec)
+        
+        savedProfile()
+        
         
     }
 
@@ -126,6 +134,7 @@ class ViewController: UIViewController {
                     state = "over"
                 }
         }
+        savingProfile()
     }
     
     //Function to check all possible winning patterns
@@ -219,6 +228,8 @@ class ViewController: UIViewController {
                     sender.isEnabled = false
                 }
         }
+        
+        
     }
     
     
@@ -344,5 +355,62 @@ class ViewController: UIViewController {
             
     }
     
+    func savingProfile(){
+        saveDefaults.setValue(a1.title(for: .normal), forKey: "a1")
+        saveDefaults.setValue(a2.title(for: .normal), forKey: "a2")
+        saveDefaults.setValue(a3.title(for: .normal), forKey: "a3")
+        saveDefaults.setValue(b1.title(for: .normal), forKey: "b1")
+        saveDefaults.setValue(b2.title(for: .normal), forKey: "b2")
+        saveDefaults.setValue(b3.title(for: .normal), forKey: "b3")
+        saveDefaults.setValue(c1.title(for: .normal), forKey: "c1")
+        saveDefaults.setValue(c2.title(for: .normal), forKey: "c2")
+        saveDefaults.setValue(c3.title(for: .normal), forKey: "c3")
+        saveDefaults.setValue(scoreLabelX.text, forKey: "scorex")
+        saveDefaults.setValue(scoreLabelO.text, forKey: "scoreo")
+        saveDefaults.setValue(turnLabel.text, forKey: "current_turn")
+        saveDefaults.setValue(resultLabel.text, forKey: "result")
+    }
+
+    func savedProfile(){
+        if let value = saveDefaults.value(forKey: "a1") as? String{
+            a1.setTitle(value, for: .normal)
+        }
+        if let value = saveDefaults.value(forKey: "a2") as? String{
+            a2.setTitle(value, for: .normal)
+        }
+        if let value = saveDefaults.value(forKey: "a3") as? String{
+            a3.setTitle(value, for: .normal)
+        }
+        if let value = saveDefaults.value(forKey: "b1") as? String{
+            b1.setTitle(value, for: .normal)
+        }
+        if let value = saveDefaults.value(forKey: "b2") as? String{
+            b2.setTitle(value, for: .normal)
+        }
+        if let value = saveDefaults.value(forKey: "b3") as? String{
+            b3.setTitle(value, for: .normal)
+        }
+        if let value = saveDefaults.value(forKey: "c1") as? String{
+            c1.setTitle(value, for: .normal)
+        }
+        if let value = saveDefaults.value(forKey: "c2") as? String{
+            c2.setTitle(value, for: .normal)
+        }
+        if let value = saveDefaults.value(forKey: "c3") as? String{
+            c3.setTitle(value, for: .normal)
+        }
+        if let value = saveDefaults.value(forKey: "scorex") as? String{
+            scoreLabelX.text = value
+        }
+        if let value = saveDefaults.value(forKey: "scoreo") as? String{
+            scoreLabelO.text = value
+        }
+        if let value = saveDefaults.value(forKey: "current_turn") as? String{
+            turnLabel.text = value
+        }
+        if let value = saveDefaults.value(forKey: "result") as? String{
+            resultLabel.text = value
+        }
+    }
     
 }

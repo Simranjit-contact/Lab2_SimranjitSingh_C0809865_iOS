@@ -14,6 +14,8 @@
 		11D87ABC279F6FBB007E80FE /* Lab2_SimranjitSingh_C0809865_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11D87ABA279F6FBB007E80FE /* Lab2_SimranjitSingh_C0809865_iOS.xcdatamodeld */; };
 		11D87ABE279F6FBC007E80FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11D87ABD279F6FBC007E80FE /* Assets.xcassets */; };
 		11D87AC1279F6FBC007E80FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D87ABF279F6FBC007E80FE /* LaunchScreen.storyboard */; };
+		11D87ACE279F9543007E80FE /* MyData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11D87ACD279F9543007E80FE /* MyData.plist */; };
+		11D87AD0279F963E007E80FE /* GameStatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D87ACF279F963E007E80FE /* GameStatsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		11D87ABD279F6FBC007E80FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11D87AC0279F6FBC007E80FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11D87AC2279F6FBC007E80FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11D87ACD279F9543007E80FE /* MyData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MyData.plist; sourceTree = "<group>"; };
+		11D87ACF279F963E007E80FE /* GameStatsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,11 @@
 		11D87AB0279F6FBB007E80FE /* Lab2_SimranjitSingh_C0809865_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				11D87ACF279F963E007E80FE /* GameStatsController.swift */,
 				11D87AB1279F6FBB007E80FE /* AppDelegate.swift */,
 				11D87AB3279F6FBB007E80FE /* SceneDelegate.swift */,
 				11D87AB5279F6FBB007E80FE /* ViewController.swift */,
+				11D87ACD279F9543007E80FE /* MyData.plist */,
 				11D87AB7279F6FBB007E80FE /* Main.storyboard */,
 				11D87ABD279F6FBC007E80FE /* Assets.xcassets */,
 				11D87ABF279F6FBC007E80FE /* LaunchScreen.storyboard */,
@@ -130,6 +136,7 @@
 			files = (
 				11D87AC1279F6FBC007E80FE /* LaunchScreen.storyboard in Resources */,
 				11D87ABE279F6FBC007E80FE /* Assets.xcassets in Resources */,
+				11D87ACE279F9543007E80FE /* MyData.plist in Resources */,
 				11D87AB9279F6FBB007E80FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +150,7 @@
 			files = (
 				11D87AB6279F6FBB007E80FE /* ViewController.swift in Sources */,
 				11D87AB2279F6FBB007E80FE /* AppDelegate.swift in Sources */,
+				11D87AD0279F963E007E80FE /* GameStatsController.swift in Sources */,
 				11D87AB4279F6FBB007E80FE /* SceneDelegate.swift in Sources */,
 				11D87ABC279F6FBB007E80FE /* Lab2_SimranjitSingh_C0809865_iOS.xcdatamodeld in Sources */,
 			);
